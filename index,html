@@ -10,14 +10,42 @@
     <div class="wrapper">
         <div class="container">
             <div class="nav">
-                <img id="nav-logo" src="images/dd.png" >
+                <img id="nav-logo" src="images/2.png" >
                 <ul id="list">
-                    <a href="#Projects">Projects</a>
-                    <a href="#About">About</a>
-                    <a href="#Skills">Skills</a>
-                    <a href="#Contact">Contact</a>
+                    <a href="#IPHONE">IPHONE</a>
+                    <a href="#MAC">MAC</a>
+                    <a href="#WATCH">WATCH</a>
+                    <a href="#AIRPODS">AIRPODS</a>
+                    <a href="#STORE">STORE</a>
+                    <a href="#Contact">CONTACT</a>
+                    <a href="#TV & HOME">TV & HOME</a>
             </div>
+            <div class="MAIN">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.26/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/1O5CAaXqgHyYpa-b/scene.splinecode"></spline-viewer>
+            </div>
+            <div class="preorder">
+                <br>
+                <button>Pre Order</button>
+               
+            </div>
+            <p  id="price">
+                                        From ₹79900.00* 
+                                   <br> Available from 20 September <br>
+                                   
+                Apple Intelligence starting in US English later this year.1</p>
+            <h1 id="desc">BEST SMARTPHONE IN MARKET?</h1>    
+            <div class="alliphone" id="IPHONE">
+                
+                <img id="all" src="images/file (7).png" >
+                <br>
+               
+            </div>   
+            <h1 id="desc">YES WE ARE</h1>  
         </div>
     </div>
+
+
+    
 </body>
 </html>
