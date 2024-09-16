@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Apple website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +19,7 @@
                     <a href="#STORE">STORE</a>
                     <a href="#Contact">CONTACT</a>
                     <a href="#TV & HOME">TV & HOME</a>
+                </ul>
             </div>
             <div class="MAIN">
                 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.26/build/spline-viewer.js"></script>
@@ -27,25 +28,107 @@
             <div class="preorder">
                 <br>
                 <button>Pre Order</button>
-               
             </div>
-            <p  id="price">
-                                        From ₹79900.00* 
-                                   <br> Available from 20 September <br>
-                                   
-                Apple Intelligence starting in US English later this year.1</p>
+            <p id="price">
+                From ₹79900.00* <br> Available from 20 September <br>
+                Apple Intelligence starting in US English later this year.1
+            </p>
             <h1 id="desc">BEST SMARTPHONE IN MARKET?</h1>    
             <div class="alliphone" id="IPHONE">
-                
-                <img id="all" src="images/file (7).png" >
-                <br>
-               
+                <img id="iphone-image" src="images/file (7).png" alt="iPhone">
             </div>   
-            <h1 id="desc">YES WE ARE</h1>  
+            <h1 id="des">YES WE ARE</h1>  
+
+            <div class="color-selector">
+                <button class="color-option" style="background-color: blue;" data-color="blue"></button>
+                <button class="color-option" style="background-color: pink;" data-color="pink"></button>
+                <button class="color-option" style="background-color: green;" data-color="green"></button>
+                <button class="color-option" style="background-color: black;" data-color="black"></button>
+            </div>
+
+            <div class="hero">
+                <h4 id="beta">BETA</h4><br>
+                <br>
+                <h1 id="ap">Apple Intelligence</h1><br>
+                <h2>Powerful possibilities.</h2>
+            </div>
+            
+            <div class="parallax" id="bg"></div>
+
+            <div class="a18">
+                <img src="images/6.jpg" alt="">
+                <h1>A18 chip. <br></h1>
+                <h2>Hi.IQ.</h2>  
+                <p>Meet A18, <span>custom-built for Apple Intelligence</span> — and so much more. <br>It jumps two generations ahead of the A16 Bionic chip in iPhone 15. <br> And it powers next-level camera features like Photographic Styles <br>and Camera Control. All with exceptional power efficiency to extend battery life.</p>    
+            </div>
+            <h1 id="kp">Keep Exploring iPhones</h1>
+            <div class="comparison-card">
+                <div class="column">
+                    <div><img id="ip" src="images/9.jpg" alt="iPhone 16"></div>
+                    <h6>iPhone 16</h6>
+                    <p>From ₹79900.00*</p>
+                    <div class="dashed-line"></div>
+                    <div><img src="images/buily.png" alt="Built for Apple Intelligence"></div>
+                    <p>Built for Apple Intelligence1</p>
+                    <div><img src="images/a18.png" alt="A18 chip"></div>
+                    <p>A18 chip with 5‑core GPU</p>
+                    <div><img src="images/ad.png" alt="Advanced camera"></div>
+                    <p>Advanced dual‑camera system <br>
+                       Advanced 48MP Fusion camera <br>
+                       2x Telephoto <br>
+                       12MP Ultra Wide camera</p>
+                    <div><img src="images/bb.png" alt="Battery life"></div>
+                    <p>Up to 27 hours video playback</p>
+                </div>
+            
+                <div class="column">
+                    <div><img id="ip" src="images/10.jpg" alt="iPhone 16 Pro"></div>
+                    <h6>iPhone 16 Pro</h6>
+                    <p>From ₹119900.00*</p>
+                    <div class="dashed-line"></div>
+                    <div><img src="images/buily.png" alt="Built for Apple Intelligence"></div>
+                    <p>Built for Apple Intelligence1</p>
+                    <div><img src="images/a18.png" alt="A18 Pro chip"></div>
+                    <p>A18 Pro chip with 5‑core GPU</p>
+                    <div><img src="images/pro.png" alt="Pro camera"></div>
+                    <p>Pro camera system <br>
+                       Our most advanced 48MP Fusion camera <br>
+                       5x Telephoto camera <br>
+                       48MP Ultra Wide camera</p>
+                    <div><img src="images/bb.png" alt="Battery life"></div>
+                    <p>Up to 33 hours video playback</p>
+                </div>
+            </div>
         </div>
     </div>
+  
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const colorButtons = document.querySelectorAll('.color-option');
+            const iphoneImage = document.getElementById('iphone-image');
 
+            colorButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const color = this.getAttribute('data-color');
+                    iphoneImage.style.opacity = 0; 
+                    setTimeout(() => {
+                        iphoneImage.src = `images/iphone-${color}.png`;
+                        iphoneImage.style.opacity = 1; 
+                    }, 300); 
+                });
+            });
+        });
+    </script>
+    <script>
+        const img = document.getElementById('bg');
 
-    
+        img.addEventListener('mouseover', () => {
+            img.src = 'images/4.jpg';
+        });
+
+        img.addEventListener('mouseout', () => {
+            img.src = 'images/3.jpg';
+        });
+    </script>
 </body>
 </html>

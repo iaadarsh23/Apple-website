@@ -1,48 +1,42 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.wrapper{
+
+
+.wrapper {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgb(0, 0, 0);
-    
-
-
-        /* background-color: #FFFFFF;
-        background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); */
-        /* background-color: #FFDEE9;
-        background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%); */
-        
-
-        
 }
-.container{
+
+
+.container {
     width: 1200px;
     margin: 1rem auto;
     background-color: rgb(0, 0, 0);
-   
     height: 3.5rem;
     transition: background 1s cubic-bezier(0.99, 0.11, 0.24, 0.84);
-    
 }
 
-.nav{
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
     height: 0.5rem;
-
 }
+
 #nav-logo {
     width: 2.5rem;
     height: 2.5rem;
-    align-items: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     transition: all 0.5s ease-in;
 }
 
@@ -51,90 +45,631 @@
     transform: scale(1.1);
 }
 
-#list{
+#list {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin: 1rem;
-    
 }
-#list  a{
+
+#list a {
     text-decoration: none;
-    list-style: none;
     color: rgb(255, 255, 255);
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Arial', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.5s ease-in;
 }
-#list a:hover{
+
+#list a:hover {
     color: rgb(0, 255, 204);
     font-weight: bold;
-    
 }
-.MAIN{
-    margin:0rem;
-}
+
+
 .preorder {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-   
-  
-    
-    margin: 0 auto; 
-    margin-top: 10vh; 
-    transform: translateY(-50%); 
+    margin: 0 auto;
+    margin-top: 10vh;
+    transform: translateY(-50%);
 }
-.preorder button{
+
+.preorder button {
     background-color: rgb(119, 0, 255);
-    text-decoration: none solid rgb(0, 0, 0);
     white-space: nowrap;
     width: 7rem;
     height: 3rem;
     color: rgb(255, 255, 255);
-    font-size:16px;
+    font-size: 16px;
     letter-spacing: 2px;
-    border-radius: 15px; 
-    display: inline-block;  
+    border-radius: 15px;
+    display: inline-block;
+    transition: all 1s ease-in-out;
 }
-#price{
+.preorder button:hover{
+    filter: drop-shadow(0 0 20px rgb(255, 253, 253)) brightness(700%);
+    color: rgb(255, 255, 255);
+    transform: scale(1);
+    font-weight: 500;
+}
+
+
+#price {
     color: white;
     text-align: center;
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 25px;
     font-weight: 500;
-    
 }
-.alliphone{
+
+.alliphone {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5rem;
 }
-#desc{
+
+#desc {
     color: rgb(169, 169, 169);
-    text-align:  center;
+    text-align: center;
     font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 10rem;
     font-weight: 800;
     letter-spacing: 20px;
     transition: all 0.5s ease-in;
-
+    position: relative;
+    white-space: nowrap;
 }
 
-#desc:hover{
-    color: rgb(0, 255, 204);
+#desc:hover {
+    background: linear-gradient(to right, rgb(0, 4, 255), rgb(91, 2, 255), rgb(255, 112, 136), red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
-#des{
+
+#des {
     color: rgb(175, 175, 175);
-    text-align:  center;
+    text-align: center;
     font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: -5rem;
     font-weight: 800;
     letter-spacing: 20px;
+    transition: all 1s ease-in;
 }
+#des:hover{
+    background: linear-gradient(to right, rgb(0, 4, 255), rgb(91, 2, 255), rgb(255, 112, 136), red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    ;transform: scale(1);
+}
+
+
+.color-selector {
+    width: 264px;
+    height: 38px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(244, 244, 244);
+    border: 5px solid #d6c9d6;
+    border-radius: 30px;
+}
+
+.color-option {
+    width: 28px;
+    height: 28px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: transform 0.3s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 486px;
+    width: 100%;
+    margin-top: 8rem;
+    background: transparent;
+}
+
+#beta {
+    border: 2px solid rgb(180, 180, 180);
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in;
+    color: wheat;
+}
+
+#beta:hover {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 112, 136), red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: scale(1.1);
+    
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: bold;
+    background: linear-gradient(to right, blue, purple, rgb(255, 112, 136), red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 550;
+    letter-spacing: 8px;
+    margin: 1rem;
+    transition: all 0.5s ease-in;
+}
+
+#ap:hover {
+    background: linear-gradient(to right, rgb(255, 0, 21), rgb(62, 4, 255), rgb(0, 255, 208), rgb(255, 204, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: 60px;
+    letter-spacing: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+/* .parallax {
+    width: 100rem;
+    height: auto;
+   
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px; 
+    
+} */
+
+
+#bg {
+    width: 90rem;
+    height: 90rem;
+    margin-left: -8rem;
+    background-image: url('images/3.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    transition: all 0.5s ease-in;
+}
+
+#bg:hover {
+    background-image: url('images/5.png');
+    background-size: cover;
+    border-radius: 50px;
+}
+
+
+.a18 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    color: white;
+    position: relative;
+}
+
+.a18 h1 {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 10px;
+    top: 70rem;
+    margin-top: 2rem;
+    font-size: 60px;
+    background: linear-gradient(to right, rgb(255, 0, 21), rgb(4, 171, 255), rgb(0, 255, 208), rgb(255, 204, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    color: transparent;
+    font-weight: 700;
+}
+
+.a18 p {
+    margin-top: 15rem;
+    font-size: 20px;
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: -10em;
+    transition: all 1s ease-in-out;
+    word-spacing: 5px;
+}
+
+.a18 p:hover {
+    background: linear-gradient(to right, rgb(255, 0, 21), rgb(4, 171, 255), rgb(0, 255, 208), rgb(255, 204, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+.a18 h2 {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 10px;
+    top: 70rem;
+    margin-top: 7rem;
+    font-size: 60px;
+    color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+
+.comparison-card {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    margin: 20px;
+    border-radius: 30px;
+    height: auto;
+    gap: 10px;
+}
+
+.column {
+    text-align: center;
+    background-color: transparent;
+}
+
+#ip {
+    margin: 2rem;
+    width: 300px;
+    height: 385px;
+    transition: all 1s ease-in-out;
+}
+
+#ip:hover {
+    filter: drop-shadow(0 0 20px rgb(43, 0, 255)) brightness(100%);
+    transform: scale(1);
+    border-radius: 30px;
+    background: transparent;
+}
+
+.column img {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.column img:last-child {
+    margin-bottom: 0;
+}
+
+
+.dashed-line {
+    border-bottom: 2px dashed;
+    padding-bottom: 10px;
+}
+#kp{
+    color: rgb(199, 199, 199);
+    font-size: 40px;
+    margin: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: dashed solid rgb(255, 255, 255);
+
+
+}
+.comparison-card h6{
+    font-size: 40px;
+    margin: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:black
+
+}
+.comparison-card h6:hover{
+    background: linear-gradient(to right, rgb(255, 0, 21), rgb(4, 171, 255), rgb(0, 255, 208), rgb(255, 204, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}
+.comparison-card p{
+    font-size: 18px;
+    margin: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:grey;
+    transition: all 1s ease-in-out;
+    word-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    #list {
+        gap: 1rem;
+    }
+
+    #list a {
+        font-size: 14px;
+    }
+
+    .preorder button {
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 14px;
+    }
+
+    #price {
+        font-size: 14px;
+    }
+
+    .alliphone {
+        margin: 1rem;
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #desc, #des {
+        font-size: 28px;
+        letter-spacing: 10px;
+    }
+
+    .color-selector {
+        width: 80%;
+        max-width: 250px;
+        height: 38px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+        letter-spacing: 0.5rem;
+    }
+
+    .parallax {
+        height: 250px;
+    }
+
+    .a18 h1 {
+        font-size: 36px;
+    }
+
+    .a18 p {
+        font-size: 16px;
+    }
+
+    .a18 h2 {
+        font-size: 36px;
+    }
+
+    .comparison-card {
+        margin: 1rem;
+    }
+
+    #ip {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .comparison-card h6 {
+        font-size: 28px;
+    }
+
+    .comparison-card p {
+        font-size: 16px;
+    }
+
+    #kp {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+    }
+
+    #nav-logo {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #list {
+        display: none; 
+    }
+
+    #list a {
+        font-size: 12px;
+    }
+
+    .preorder button {
+        width: 5rem;
+        height: 2rem;
+        font-size: 12px;
+    }
+
+    #price {
+        font-size: 12px;
+    }
+
+    .alliphone {
+        margin: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+
+    #desc, #des {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
+
+    .color-selector {
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .parallax {
+        height: 200px;
+    }
+
+    .a18 h1 {
+        font-size: 28px;
+    }
+
+    .a18 p {
+        font-size: 14px;
+    }
+
+    .a18 h2 {
+        font-size: 28px;
+    }
+
+    .comparison-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comparison-card h6 {
+        font-size: 24px;
+    }
+
+    .comparison-card p {
+        font-size: 14px;
+    }
+
+    #kp {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #list {
+        display: none; 
+    }
+
+    #list a {
+        font-size: 10px;
+    }
+
+    .preorder button {
+        width: 4rem;
+        height: 1.5rem;
+        font-size: 10px;
+    }
+
+    #price {
+        font-size: 10px;
+    }
+
+    .alliphone {
+        margin: 1rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #desc, #des {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
+    .color-selector {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .parallax {
+        height: 150px;
+    }
+
+    .a18 h1 {
+        font-size: 24px;
+    }
+
+    .a18 p {
+        font-size: 12px;
+    }
+
+    .a18 h2 {
+        font-size: 24px;
+    }
+
+    .comparison-card {
+        margin: 1rem;
+    }
+
+    .comparison-card h6 {
+        font-size: 20px;
+    }
+
+    .comparison-card p {
+        font-size: 12px;
+    }
+
+    #kp {
+        font-size: 20px;
+    }
+}
+
